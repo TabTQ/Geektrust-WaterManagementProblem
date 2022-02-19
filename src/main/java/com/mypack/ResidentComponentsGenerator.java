@@ -15,9 +15,9 @@ public class ResidentComponentsGenerator {
 		setTotalWaterConsumption(totalWaterConsumption);
 	}
 	private void waterPriceCalculator(int corporationWaterRatio, int borewellWaterRatio) {
-		double corporationWaterPrice = (corporationWaterRatio * totalWaterConsumption)
+		double corporationWaterPrice = (double)(corporationWaterRatio * totalWaterConsumption)
 				/ (corporationWaterRatio + borewellWaterRatio);
-		double borewellWaterPrice = (borewellWaterRatio * totalWaterConsumption * 1.5)
+		double borewellWaterPrice = (double)(borewellWaterRatio * totalWaterConsumption * 1.5)
 				/ (corporationWaterRatio + borewellWaterRatio);
 		setTotalResidentWaterPrice((int) (corporationWaterPrice + borewellWaterPrice));
 	}
